@@ -1,0 +1,11 @@
+{
+  "allowedGroups": [
+    "administrators"
+  ],
+  "allowedScheduledJobsGroups": [
+    "administrators"
+  ],
+  "auditDisabled": false,
+  "emailEnabled": false,
+  "threadTimeout": 0
+}

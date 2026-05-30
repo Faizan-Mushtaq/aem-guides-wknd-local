@@ -148,6 +148,11 @@ Import-Package: javax.annotation;version=0.0.0,*
             <version>4.4</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-bundle</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
       <!-- Additional Profiles for Cloud Service vs. 6.x -->

@@ -1,0 +1,6 @@
+{
+  "css-color": "$[env:ACS_COMMONS_ENV_INDICATOR_CSS_COLOR;default=red]",
+  "css-override": "#acs-commons-env-indicator {     \nbackground-color: #ff0000;      \ncolor: #FFF;  \n\nposition: fixed;\nbottom: 0;\nleft: 50%;\nwidth: 126px;\nmargin-left: -63px;\nheight: 30px;      \nfont: bold 18px",
+  "inner-html": "$[env:ACS_COMMONS_ENV_INDICATOR_INNER_HTML;default=Local]",
+  "browser-title-prefix": "$[env:ACS_COMMONS_ENV_INDICATOR_BROWSER_TITLE_PREFIX;default=Local]"
+}

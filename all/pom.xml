@@ -90,6 +90,18 @@
                             <type>zip</type>
                             <target>/apps/wknd-vendor-packages/content/install</target>
                         </embedded>
+                        <embedded>
+                            <!-- the artifact with the given id from the project dependencies is embedded -->
+                            <artifactId>acs-aem-commons-all</artifactId>
+                            <target>/apps/wknd-vendor-packages/container/install</target>
+                            <filter>true</filter>
+                            <isAllVersionsFilter>true</isAllVersionsFilter>
+                        </embedded>
+                        <embedded>
+                            <groupId>be.orbinson.aem</groupId>
+                            <artifactId>aem-groovy-console-all</artifactId>
+                            <target>/apps/wknd-vendor-packages/content/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -123,7 +135,7 @@
                         <id>analyse-project</id>
                         <phase>verify</phase>
                         <goals>
-                            <goal>project-analyse</goal>                           
+                            <goal>project-analyse</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -200,7 +212,7 @@
                 <plugins>
                     <plugin>
                         <groupId>org.apache.jackrabbit</groupId>
-                        <artifactId>filevault-package-maven-plugin</artifactId>                    
+                        <artifactId>filevault-package-maven-plugin</artifactId>
                         <extensions>true</extensions>
                         <configuration>
                             <finalName>aem-guides-wknd.all-${version}-classic</finalName>
@@ -257,28 +269,41 @@
                                     <artifactId>aem-guides-wknd-shared.ui.content</artifactId>
                                     <type>zip</type>
                                     <target>/apps/wknd-vendor-packages/content/install</target>
-                                </embedded>                           
+                                </embedded>
                             </embeddeds>
                         </configuration>
                     </plugin>
                 </plugins>
             </build>
-              <dependencies>    
+            <dependencies>
                 <!-- WKND Shared -->
                 <dependency>
                     <groupId>com.adobe.aem.guides</groupId>
                     <artifactId>aem-guides-wknd-shared.ui.content</artifactId>
                     <version>${wknd-shared.version}</version>
                     <type>zip</type>
-                </dependency>        
+                </dependency>
             </dependencies>
-         </profile>
+        </profile>
     </profiles>
 
     <!-- ====================================================================== -->
     <!-- D E P E N D E N C I E S                                                -->
     <!-- ====================================================================== -->
     <dependencies>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-all</artifactId>
+            <classifier>cloud</classifier>
+            <version>${acs.aem.commons.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>be.orbinson.aem</groupId>
+            <artifactId>aem-groovy-console-all</artifactId>
+            <version>${groovy.version}</version>
+            <type>zip</type>
+        </dependency>
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>aem-guides-wknd.ui.apps</artifactId>
@@ -303,7 +328,7 @@
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
-         <!-- Core Component Dependency (6.x only)-->
+        <!-- Core Component Dependency (6.x only)-->
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.content</artifactId>
@@ -316,13 +341,13 @@
         </dependency>
         <dependency>
             <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.core</artifactId>                
+            <artifactId>core.wcm.components.core</artifactId>
         </dependency>
         <!-- WKND Shared -->
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>aem-guides-wknd-shared.ui.content</artifactId>
             <type>zip</type>
-        </dependency>        
+        </dependency>
     </dependencies>
 </project>

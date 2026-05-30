@@ -66,6 +66,8 @@
         <wknd-shared.version>3.1.0</wknd-shared.version>
         <wknd-shared.65.version>2.2.2</wknd-shared.65.version>
         <aemanalyser.version>1.6.6</aemanalyser.version>
+        <acs.aem.commons.version>6.17.2</acs.aem.commons.version>
+        <groovy.version>19.1.0</groovy.version>
     </properties>
 
     <organization>
@@ -779,6 +781,20 @@ Bundle-DocURL:
                 <artifactId>core.wcm.components.config</artifactId>
                 <type>zip</type>
                 <version>${core.wcm.components.version}</version>
+            </dependency>
+            <!-- ACS Commons -->
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-bundle</artifactId>
+                <version>${acs.aem.commons.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- Groovy Console -->
+            <dependency>
+                <groupId>be.orbinson.aem</groupId>
+                <artifactId>aem-groovy-console-all</artifactId>
+                <version>${groovy.version}</version>
+                <type>zip</type>
             </dependency>
 
             <!-- WKND Shared -->
