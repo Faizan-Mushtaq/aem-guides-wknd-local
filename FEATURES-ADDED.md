@@ -11,3 +11,5 @@ p.limit=-1
 p.hits=full
 p.indexTag=cqPageContentModified
 ```
+The index tag is added to force the system to pick cqPageContent index, 
+else it would pick up pathRefrence index as that is less costly and expected results will not be shown.
