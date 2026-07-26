@@ -1,0 +1,25 @@
+{
+  "cqPageContent": {
+    "tags": ["cqPageContentModified"],
+    "aggregates": {
+      "cq:PageContent": {
+        "include6": {
+          "jcr:primaryType": "nt:unstructured",
+          "path": "*/*/*/*/*/*/*"
+        }
+      }
+    },
+    "indexRules": {
+      "cq:PageContent": {
+        "properties": {
+          "allText": {
+            "name": ".*",
+            "isRegexp": true,
+            "nodeScopeIndex": true,
+            "analyzed": true
+          }
+        }
+      }
+    }
+  }
+}
